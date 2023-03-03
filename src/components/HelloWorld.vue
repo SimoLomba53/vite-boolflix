@@ -1,40 +1,43 @@
-<script setup>
-import { ref } from 'vue'
+<script>
 
-defineProps({
-  msg: String,
-})
-
-const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+   <div>
+    <b-container fluid>
+    <b-row class="my-1">
+      <b-col sm="2">
+        <label for="input-small">Small:</label>
+      </b-col>
+      <b-col sm="10">
+        <b-form-input id="input-small" size="sm" placeholder="Enter your name"></b-form-input>
+      </b-col>
+    </b-row>
+
+    <b-row class="my-1">
+      <b-col sm="2">
+        <label for="input-default">Default:</label>
+      </b-col>
+      <b-col sm="10">
+        <b-form-input id="input-default" placeholder="Enter your name"></b-form-input>
+      </b-col>
+    </b-row>
+
+    <b-row class="my-1">
+      <b-col sm="2">
+        <label for="input-large">Large:</label>
+      </b-col>
+      <b-col sm="10">
+        <b-form-input id="input-large" size="lg" placeholder="Enter your name"></b-form-input>
+      </b-col>
+    </b-row>
+  </b-container>
   </div>
+  
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
+<style>
+
 </style>
