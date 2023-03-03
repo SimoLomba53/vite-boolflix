@@ -1,12 +1,14 @@
 <script >
-import HelloWorld from './components/HelloWorld.vue';
+import HeaderPart from './components/HeaderPart.vue';
+import MainPart from './components/MainPart.vue';
+
 import axios from 'axios'
 
 
 
 export default{
  
-  components:{HelloWorld},
+  components:{ HeaderPart , MainPart},
 
 
   created() {
@@ -23,7 +25,8 @@ export default{
 </script>
 
 <template>
-    <HelloWorld/>
+    <HeaderPart/>
+    <MainPart/>
 
 </template>
 
