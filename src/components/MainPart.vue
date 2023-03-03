@@ -1,7 +1,13 @@
 <script>
+import CardList from './CardList.vue'
+   
+export default{
+    props:{
+    films:Array, 
+    },
 
-   export default{
-    films:Array,
+    components:{CardList},
+
    };
 
 
@@ -10,7 +16,7 @@
 <template>
     <section>
         <div class="bg-info">
-
+            <CardList :films="films"/>
         </div>
     </section>
 </template>
