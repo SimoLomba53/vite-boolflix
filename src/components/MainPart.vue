@@ -1,5 +1,10 @@
 <script>
 
+   export default{
+    films:Array,
+   };
+
+
 </script>
 
 <template>

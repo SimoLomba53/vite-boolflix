@@ -4,9 +4,12 @@ import MainPart from './components/MainPart.vue';
 
 import axios from 'axios'
 
-
-
-export default{
+  export default {
+    data() {
+      return {
+        films: [],
+      };
+    },
  
   components:{ HeaderPart , MainPart},
 
@@ -14,10 +17,10 @@ export default{
   created() {
     axios
       .get(
-        "https://api.themoviedb.org/3/search/movie?api_key=0947d1f65cbadea30bba5515fa4869c6"
+        "https://api.themoviedb.org/3/search/movie?api_key=0947d1f65cbadea30bba5515fa4869c6&query=ritorno"
       )
       .then((response) => {
-        console.log(response.data.results);
+        this.films=response.data.results;
       });
   },
 
@@ -26,7 +29,7 @@ export default{
 
 <template>
     <HeaderPart/>
-    <MainPart/>
+    <MainPart :films="films"/>
 
 </template>
 
