@@ -17,7 +17,7 @@ import axios from 'axios'
   created() {
     axios
       .get(
-        "https://api.themoviedb.org/3/search/movie?api_key=0947d1f65cbadea30bba5515fa4869c6&query=ritorno"
+        "https://api.themoviedb.org/3/search/movie?api_key=0947d1f65cbadea30bba5515fa4869c6&query=atlanta"
       )
       .then((response) => {
         this.films=response.data.results;
