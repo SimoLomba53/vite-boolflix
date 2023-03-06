@@ -19,6 +19,8 @@ export default {
         return "https://www.countryflags.com/wp-content/uploads/spain-flag-png-large.png";
       if (language == "ru")
         return "https://www.countryflags.com/wp-content/uploads/russia-flag-png-large.png";
+      if (language == "fr")
+        return "https://www.countryflags.com/wp-content/uploads/france-flag-png-large.png";
 
       return `https://www.countryflags.com/flag-of-${language}/`;
     },
@@ -37,6 +39,6 @@ export default {
 
 <style scoped>
 #flag {
-  width: 10px;
+  width: 30px;
 }
 </style>
