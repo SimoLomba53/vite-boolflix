@@ -1,5 +1,23 @@
 <script>
-  
+  import BaseSearch from './BaseSearch.vue'
+
+  export default{
+    props:{
+        term:String
+    },
+
+
+    components:{BaseSearch},
+
+     methods: {
+        searchingFilter(term) {
+            console.log(term);
+        },
+    },
+
+     
+  }
+
 </script>
 
 <template>
@@ -8,12 +26,11 @@
             <div>
                 <h1 class="text-info">BOOLFIX</h1>
             </div>
+            
             <div>
-              <div class="input-group">
-               <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-               <span class="input-group-text" id="basic-addon2">SEARCH</span>
-              </div>
+              <BaseSearch @searching="searchingFilter" />
             </div>
+            
         </div>
     </section>
 </template>
