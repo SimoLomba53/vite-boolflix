@@ -9,13 +9,18 @@ export default {
 
   methods: {
     getFlag(language) {
-      if (language == "it") return "https://url/to/ita/flag";
-      if (language == "en") return "https://url/to/eng/flag";
-      if (language == "jp") return "https://url/to/jpn/flag";
-      if (language == "es") return "https://url/to/esp/flag";
-      if (language == "ru") return "https://url/to/rus/flag";
+      if (language == "it")
+        return "https://www.countryflags.com/wp-content/uploads/italy-flag-png-large.png";
+      if (language == "en")
+        return "https://www.countryflags.com/wp-content/uploads/england-flag-png-large.png";
+      if (language == "jp")
+        return "https://www.countryflags.com/wp-content/uploads/japan-flag-png-large.png";
+      if (language == "es")
+        return "https://www.countryflags.com/wp-content/uploads/spain-flag-png-large.png";
+      if (language == "ru")
+        return "https://www.countryflags.com/wp-content/uploads/russia-flag-png-large.png";
 
-      return `https://url/to/${language}/flag`;
+      return `https://www.countryflags.com/flag-of-${language}/`;
     },
   },
 };
