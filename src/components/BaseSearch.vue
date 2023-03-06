@@ -6,11 +6,9 @@
         };
     },
 
-    
-    $emit: ["searching"],
+    emits: ["searching"],
 
     methods: {
-       
         search() {
             this.$emit("searching", this.term);
         },

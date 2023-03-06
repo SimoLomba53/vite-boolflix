@@ -2,16 +2,18 @@
   import BaseSearch from './BaseSearch.vue'
 
   export default{
-  
-
+    
 
     components:{BaseSearch},
-
+    
+    emits: ["searchingToGranpa"],
+     
      methods: {
-        searchingFilter(term) {
-            console.log(term);
+        searchingToGranpa(term) {
+            this.$emit('searchingToGranpa', term)
         },
     },
+     
 
      
   }
@@ -26,7 +28,7 @@
             </div>
             
             <div>
-              <BaseSearch @searching="searchingFilter" />
+              <BaseSearch @searching="searchingToGranpa"/>
             </div>
             
         </div>

@@ -9,27 +9,35 @@ import axios from 'axios'
     data() {
       return {
         films: [],
+        term: ""
       };
     },
  
-  components:{ HeaderPart , MainPart},
+  components:{ HeaderPart , MainPart,BaseSearch},
 
+  methods: {
+    doSomething(term) {
+      console.log(term);
+    }
+  },
 
   created() {
     axios
       .get(
-        "https://api.themoviedb.org/3/search/movie?api_key=0947d1f65cbadea30bba5515fa4869c6&query={{ term }}"
+        `https://api.themoviedb.org/3/search/movie?api_key=0947d1f65cbadea30bba5515fa4869c6&query=${this.term}`
       )
       .then((response) => {
         this.films=response.data.results;
       });
   },
 
-}
+
+
+} 
 </script>
 
 <template>
-    <HeaderPart/>
+    <HeaderPart @searchingToGranpa="doSomething"/>
     <MainPart :films="films"/>
 
 </template>
