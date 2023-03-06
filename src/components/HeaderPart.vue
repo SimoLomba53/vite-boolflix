@@ -2,9 +2,7 @@
   import BaseSearch from './BaseSearch.vue'
 
   export default{
-    props:{
-        term:String
-    },
+  
 
 
     components:{BaseSearch},

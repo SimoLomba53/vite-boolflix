@@ -12,7 +12,6 @@
     methods: {
        
         search() {
-            
             this.$emit("searching", this.term);
         },
     },
