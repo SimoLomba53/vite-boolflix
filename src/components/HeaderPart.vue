@@ -6,8 +6,6 @@ export default {
     };
   },
 
-  emits: ["searching"],
-
   methods: {
     search(term) {
       this.$emit("searching", term);
