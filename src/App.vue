@@ -9,7 +9,7 @@ import axios from 'axios'
     data() {
       return {
         films: [],
-        term: ""
+        term:"",
       };
     },
  
@@ -37,7 +37,7 @@ import axios from 'axios'
 </script>
 
 <template>
-    <HeaderPart @searchingToGranpa="doSomething"/>
+    <HeaderPart @searchingToGrandpa="doSomething"/>
     <MainPart :films="films"/>
 
 </template>

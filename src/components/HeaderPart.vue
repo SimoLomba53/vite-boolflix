@@ -6,11 +6,11 @@
 
     components:{BaseSearch},
     
-    emits: ["searchingToGranpa"],
+    emits: ["searchingToGrandpa"],
      
      methods: {
-        searchingToGranpa(term) {
-            this.$emit('searchingToGranpa', term)
+        searchingToGrandpa(term) {
+            this.$emit('searchingToGrandpa', term)
         },
     },
      
@@ -28,7 +28,7 @@
             </div>
             
             <div>
-              <BaseSearch @searching="searchingToGranpa"/>
+              <BaseSearch @searching="searchingToGrandpa"/>
             </div>
             
         </div>
