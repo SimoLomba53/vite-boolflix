@@ -8,7 +8,7 @@ export default {
 
   methods: {
     search() {
-      this.$emit("searching", term);
+      this.$emit("searching", this.term);
     },
   },
 };
