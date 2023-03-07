@@ -1,4 +1,5 @@
 <script>
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import SingleCard from "./SingleCard.vue";
 
 export default {
@@ -7,6 +8,7 @@ export default {
     series: Array,
     baseimageurl: String,
     sizeimage: String,
+    starIcon: String,
   },
 
   components: { SingleCard },
@@ -20,8 +22,9 @@ export default {
       :title="film.title"
       :originalname="film.original_title"
       :language="film.original_language"
-      :vote="film.vote_average"
+      :vote="film.vote_average / 2"
       :imagefilm="baseimageurl + sizeimage + film.poster_path"
+      :starIcon="faStar * (film.vote_average / 2)"
     />
   </div>
   <div>
@@ -30,7 +33,7 @@ export default {
       :titleseries="serie.name"
       :originalnameseries="serie.original_name"
       :originallanguageseries="serie.original_language"
-      :voteseries="serie.vote_average"
+      :voteseries="serie.vote_average / 2"
       :imageseries="baseimageurl + sizeimage + serie.poster_path"
     />
   </div>

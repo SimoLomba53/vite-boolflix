@@ -14,6 +14,7 @@ export default {
     voteseries: String,
     imagefilm: Image,
     imageseries: Image,
+    starIcon: String,
   },
 
   components: { faStarSolid, faStarRegular },
@@ -63,7 +64,7 @@ export default {
     <p>{{ originalname }}</p>
     <img id="flag" :src="getFlag(language)" alt="" />
     <p>{{ vote }}</p>
-    <p><font-awesome-icon icon="fa-solid fa-star" /></p>
+    <p>{{ starIcon }}</p>
   </div>
 
   <div class="text-center text-light">
@@ -73,6 +74,9 @@ export default {
     <img id="flag" :src="getFlag(originallanguageseries)" alt="" />
     <p>
       {{ voteseries }}
+    </p>
+    <p v-for="(voteseries, faStarSolid) in voteseries">
+      {{ faStarSolid }} * {{ voteseries }}
     </p>
   </div>
 </template>

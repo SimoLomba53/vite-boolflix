@@ -4,6 +4,7 @@ import MainPart from "./components/MainPart.vue";
 import BaseSearch from "./components/BaseSearch.vue";
 
 import axios from "axios";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default {
   data() {
@@ -12,6 +13,7 @@ export default {
       series: [],
       baseimageurl: "https://image.tmdb.org/t/p/",
       sizeimage: "http://image.tmdb.org/t/p/w500/",
+      starIcon: faStar,
     };
   },
 
@@ -57,6 +59,7 @@ export default {
     :series="series"
     :baseimageurl="baseimageurl"
     :sizeimage="sizeimage"
+    :starIcon="starIcon"
   />
 </template>
 

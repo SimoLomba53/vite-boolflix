@@ -1,4 +1,5 @@
 <script>
+import { icon } from "@fortawesome/fontawesome-svg-core";
 import CardList from "./CardList.vue";
 
 export default {
@@ -7,6 +8,7 @@ export default {
     series: Array,
     baseimageurl: String,
     sizeimage: String,
+    starIcon: String,
   },
 
   components: { CardList },
@@ -21,6 +23,7 @@ export default {
         :series="series"
         :baseimageurl="baseimageurl"
         :sizeimage="sizeimage"
+        :starIcon="starIcon"
       />
     </div>
   </section>
