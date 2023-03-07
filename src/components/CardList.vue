@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <div class="">
+  <div>
     <div
       class="d-flex flex-row flex-wrap align-items-center justify-content-center gap-4 p-5"
     >
@@ -31,7 +31,9 @@ export default {
         :starIconResult="starIcon * (film.vote_average / 2)"
       />
     </div>
-    <div>
+    <div
+      class="d-flex flex-row flex-wrap align-items-center justify-content-center gap-4 p-5"
+    >
       <SingleCard
         v-for="serie in series"
         :titleseries="serie.name"

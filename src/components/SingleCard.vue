@@ -60,11 +60,13 @@ export default {
 
 <template>
   <div class="flip-card text-center text-light">
-    <div class="flip-card-inner">
+    <div class="flip-card-inner d-flex">
       <div class="flip-card-front">
         <img :src="imagefilm" alt="" />
       </div>
-      <div class="flip-card-back">
+      <div
+        class="flip-card-back d-flex flex-column align-items-center justify-content-center"
+      >
         <h1>{{ title }}</h1>
         <p>{{ originalname }}</p>
         <img id="flag" :src="getFlag(language)" alt="" />
@@ -94,6 +96,9 @@ export default {
 <style scoped>
 #flag {
   width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flip-card {
@@ -101,6 +106,7 @@ export default {
   width: 342px;
   height: 513px;
   perspective: 1000px;
+  border: 1px solid white;
 }
 
 .flip-card-inner {
@@ -126,7 +132,7 @@ export default {
 }
 
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: rgb(207, 207, 207);
   color: white;
   transform: rotateY(180deg);
 }
