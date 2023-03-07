@@ -61,6 +61,7 @@ export default {
   </div>
 
   <div class="text-center text-light">
+    <img :src="imageseries" alt="" />
     <h1>{{ titleseries }}</h1>
     <p>{{ originalnameseries }}</p>
     <img id="flag" :src="getFlag(originallanguageseries)" alt="" />
