@@ -17,10 +17,10 @@ export default {
 <template>
   <section>
     <div
-      class="d-flex flex-row align-items-center justify-content-evenly bg-light"
+      class="d-flex flex-row align-items-center justify-content-between p-2 bg-light"
     >
       <div>
-        <h1 class="text-info">BOOLFIX</h1>
+        <h1 class="text-danger">BOOLFIX</h1>
       </div>
 
       <div>
@@ -30,7 +30,7 @@ export default {
             <input
               type="text"
               v-model="term"
-              class="form-control"
+              class="form-control border-1 border-secondary"
               placeholder="Search..."
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
@@ -38,7 +38,7 @@ export default {
             <button
               type="button"
               @click="search"
-              class="input-group-text"
+              class="input-group-text text-white bg-dark"
               id="basic-addon2"
             >
               SEARCH

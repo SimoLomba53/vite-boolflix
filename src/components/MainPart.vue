@@ -17,7 +17,7 @@ export default {
 
 <template>
   <section>
-    <div class="bg-info">
+    <div class="bg-dark">
       <CardList
         :films="films"
         :series="series"
