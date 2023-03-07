@@ -12,7 +12,7 @@ export default {
       films: [],
       series: [],
       baseimageurl: "https://image.tmdb.org/t/p/",
-      sizeimage: "http://image.tmdb.org/t/p/w500/",
+      sizeimage: "http://image.tmdb.org/t/p/w342/",
       starIcon: faStar,
     };
   },

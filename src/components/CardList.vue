@@ -17,26 +17,30 @@ export default {
 </script>
 
 <template>
-  <div>
-    <SingleCard
-      v-for="film in films"
-      :title="film.title"
-      :originalname="film.original_title"
-      :language="film.original_language"
-      :vote="film.vote_average / 2"
-      :imagefilm="baseimageurl + sizeimage + film.poster_path"
-      :starIconResult="starIcon * (film.vote_average / 2)"
-    />
-  </div>
-  <div>
-    <SingleCard
-      v-for="serie in series"
-      :titleseries="serie.name"
-      :originalnameseries="serie.original_name"
-      :originallanguageseries="serie.original_language"
-      :voteseries="serie.vote_average / 2"
-      :imageseries="baseimageurl + sizeimage + serie.poster_path"
-    />
+  <div class="">
+    <div
+      class="d-flex flex-row flex-wrap align-items-center justify-content-center gap-4 p-5"
+    >
+      <SingleCard
+        v-for="film in films"
+        :title="film.title"
+        :originalname="film.original_title"
+        :language="film.original_language"
+        :vote="film.vote_average / 2"
+        :imagefilm="baseimageurl + sizeimage + film.poster_path"
+        :starIconResult="starIcon * (film.vote_average / 2)"
+      />
+    </div>
+    <div>
+      <SingleCard
+        v-for="serie in series"
+        :titleseries="serie.name"
+        :originalnameseries="serie.original_name"
+        :originallanguageseries="serie.original_language"
+        :voteseries="serie.vote_average / 2"
+        :imageseries="baseimageurl + sizeimage + serie.poster_path"
+      />
+    </div>
   </div>
 </template>
 

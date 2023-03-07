@@ -59,31 +59,75 @@ export default {
 </script>
 
 <template>
-  <div class="text-center text-light">
-    <img :src="imagefilm" alt="" />
-    <h1>{{ title }}</h1>
-    <p>{{ originalname }}</p>
-    <img id="flag" :src="getFlag(language)" alt="" />
-    <p>{{ vote }}</p>
-    <p>{{ starIconResult }}</p>
+  <div class="flip-card text-center text-light">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img :src="imagefilm" alt="" />
+      </div>
+      <div class="flip-card-back">
+        <h1>{{ title }}</h1>
+        <p>{{ originalname }}</p>
+        <img id="flag" :src="getFlag(language)" alt="" />
+        <p>{{ vote }}</p>
+        <p>{{ starIconResult }}</p>
+      </div>
+    </div>
   </div>
 
   <div class="text-center text-light">
-    <img :src="imageseries" alt="" />
-    <h1>{{ titleseries }}</h1>
-    <p>{{ originalnameseries }}</p>
-    <img id="flag" :src="getFlag(originallanguageseries)" alt="" />
-    <p>
-      {{ voteseries }}
-    </p>
-    <p>
-      {{ starIconResult }}
-    </p>
+    <div class="">
+      <div class="">
+        <img :src="imageseries" alt="" />
+      </div>
+      <div class="">
+        <h1>{{ titleseries }}</h1>
+        <p>{{ originalnameseries }}</p>
+        <img id="flag" :src="getFlag(originallanguageseries)" alt="" />
+        <p>
+          {{ voteseries }}
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 #flag {
   width: 30px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 342px;
+  height: 513px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }
 </style>
