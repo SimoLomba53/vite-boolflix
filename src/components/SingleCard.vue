@@ -1,4 +1,7 @@
 <script>
+import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
+
 export default {
   props: {
     title: String,
@@ -12,6 +15,8 @@ export default {
     imagefilm: Image,
     imageseries: Image,
   },
+
+  components: { faStarSolid, faStarRegular },
 
   methods: {
     getFlag(language) {
@@ -58,6 +63,7 @@ export default {
     <p>{{ originalname }}</p>
     <img id="flag" :src="getFlag(language)" alt="" />
     <p>{{ vote }}</p>
+    <p><font-awesome-icon icon="fa-solid fa-star" /></p>
   </div>
 
   <div class="text-center text-light">
@@ -65,7 +71,9 @@ export default {
     <h1>{{ titleseries }}</h1>
     <p>{{ originalnameseries }}</p>
     <img id="flag" :src="getFlag(originallanguageseries)" alt="" />
-    <p>{{ voteseries }}</p>
+    <p>
+      {{ voteseries }}
+    </p>
   </div>
 </template>
 
