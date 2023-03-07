@@ -5,6 +5,10 @@ export default {
     originalname: String,
     language: String,
     vote: String,
+    titleseries: String,
+    originalnameseries: String,
+    originallanguageseries: String,
+    voteseries: String,
   },
 
   methods: {
@@ -24,6 +28,23 @@ export default {
 
       return `https://www.countryflags.com/flag-of-${language}/`;
     },
+
+    getFlag(originallanguageseries) {
+      if (originallanguageseries == "it")
+        return "https://www.countryflags.com/wp-content/uploads/italy-flag-png-large.png";
+      if (originallanguageseries == "en")
+        return "https://www.countryflags.com/wp-content/uploads/england-flag-png-large.png";
+      if (originallanguageseries == "jp")
+        return "https://www.countryflags.com/wp-content/uploads/japan-flag-png-large.png";
+      if (originallanguageseries == "es")
+        return "https://www.countryflags.com/wp-content/uploads/spain-flag-png-large.png";
+      if (originallanguageseries == "ru")
+        return "https://www.countryflags.com/wp-content/uploads/russia-flag-png-large.png";
+      if (originallanguageseries == "fr")
+        return "https://www.countryflags.com/wp-content/uploads/france-flag-png-large.png";
+
+      return `https://www.countryflags.com/flag-of-${originallanguageseries}/`;
+    },
   },
 };
 </script>
@@ -34,6 +55,13 @@ export default {
     <p>{{ originalname }}</p>
     <img id="flag" :src="getFlag(language)" alt="" />
     <p>{{ vote }}</p>
+  </div>
+
+  <div class="text-center text-light">
+    <h1>{{ titleseries }}</h1>
+    <p>{{ originalnameseries }}</p>
+    <img id="flag" :src="getFlag(originallanguageseries)" alt="" />
+    <p>{{ voteseries }}</p>
   </div>
 </template>
 
