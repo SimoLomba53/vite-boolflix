@@ -61,27 +61,31 @@ export default {
 <template>
   <div class="flip-card text-center text-light">
     <div class="flip-card-inner d-flex">
-      <div class="flip-card-front">
+      <div
+        class="flip-card-front d-flex align-items-center justify-content-center"
+      >
         <img :src="imagefilm" alt="" />
+        <img :src="imageseries" alt="" />
       </div>
       <div
         class="flip-card-back d-flex flex-column align-items-center justify-content-center"
       >
-        <h1>{{ title }}</h1>
-        <p>{{ originalname }}</p>
+        <h1>{{ title }}{{ titleseries }}</h1>
+        <p>{{ originalname }}{{ originalnameseries }}</p>
         <img id="flag" :src="getFlag(language)" alt="" />
-        <p>{{ vote }}</p>
+        <img id="flag" :src="getFlag(originallanguageseries)" alt="" />
+        <p>{{ vote }}{{ voteseries }}</p>
         <p>{{ starIconResult }}</p>
       </div>
     </div>
   </div>
 
-  <div class="text-center text-light">
-    <div class="">
-      <div class="">
+  <!--<div class="flip-card text-center text-light">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
         <img :src="imageseries" alt="" />
       </div>
-      <div class="">
+      <div class="flip-card-back">
         <h1>{{ titleseries }}</h1>
         <p>{{ originalnameseries }}</p>
         <img id="flag" :src="getFlag(originallanguageseries)" alt="" />
@@ -90,7 +94,7 @@ export default {
         </p>
       </div>
     </div>
-  </div>
+  </div>-->
 </template>
 
 <style scoped>
@@ -106,7 +110,6 @@ export default {
   width: 342px;
   height: 513px;
   perspective: 1000px;
-  border: 1px solid white;
 }
 
 .flip-card-inner {
@@ -135,5 +138,9 @@ export default {
   background-color: rgb(207, 207, 207);
   color: white;
   transform: rotateY(180deg);
+}
+
+.flip-card-front img {
+  height: 513px;
 }
 </style>

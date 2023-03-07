@@ -30,10 +30,7 @@ export default {
         :imagefilm="baseimageurl + sizeimage + film.poster_path"
         :starIconResult="starIcon * (film.vote_average / 2)"
       />
-    </div>
-    <div
-      class="d-flex flex-row flex-wrap align-items-center justify-content-center gap-4 p-5"
-    >
+
       <SingleCard
         v-for="serie in series"
         :titleseries="serie.name"
