@@ -6,6 +6,7 @@ export default {
     films: Array,
     series: Array,
     baseimageurl: String,
+    sizeimage: String,
   },
 
   components: { CardList },
@@ -15,7 +16,12 @@ export default {
 <template>
   <section>
     <div class="bg-info">
-      <CardList :films="films" :series="series" :baseimageurl="baseimageurl" />
+      <CardList
+        :films="films"
+        :series="series"
+        :baseimageurl="baseimageurl"
+        :sizeimage="sizeimage"
+      />
     </div>
   </section>
 </template>

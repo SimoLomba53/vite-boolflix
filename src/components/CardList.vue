@@ -6,6 +6,7 @@ export default {
     films: Array,
     series: Array,
     baseimageurl: String,
+    sizeimage: String,
   },
 
   components: { SingleCard },
@@ -20,7 +21,7 @@ export default {
       :originalname="film.original_title"
       :language="film.original_language"
       :vote="film.vote_average"
-      :imagefilm="baseimageurl + film.poster_path"
+      :imagefilm="baseimageurl + sizeimage + film.poster_path"
     />
   </div>
   <div>
@@ -30,7 +31,7 @@ export default {
       :originalnameseries="serie.original_name"
       :originallanguageseries="serie.original_language"
       :voteseries="serie.vote_average"
-      :imageseries="baseimageurl + serie.poster_path"
+      :imageseries="baseimageurl + sizeimage + serie.poster_path"
     />
   </div>
 </template>

@@ -11,6 +11,7 @@ export default {
       films: [],
       series: [],
       baseimageurl: "https://image.tmdb.org/t/p/",
+      sizeimage: "http://image.tmdb.org/t/p/w500/",
     };
   },
 
@@ -51,7 +52,12 @@ export default {
 
 <template>
   <HeaderPart @searching="doSomethingResults" />
-  <MainPart :films="films" :series="series" :baseimageurl="baseimageurl" />
+  <MainPart
+    :films="films"
+    :series="series"
+    :baseimageurl="baseimageurl"
+    :sizeimage="sizeimage"
+  />
 </template>
 
 <style scoped></style>
