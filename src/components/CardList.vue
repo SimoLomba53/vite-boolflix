@@ -1,4 +1,5 @@
 <script>
+import { icon } from "@fortawesome/fontawesome-svg-core";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import SingleCard from "./SingleCard.vue";
 
@@ -24,7 +25,7 @@ export default {
       :language="film.original_language"
       :vote="film.vote_average / 2"
       :imagefilm="baseimageurl + sizeimage + film.poster_path"
-      :starIcon="faStar * (film.vote_average / 2)"
+      :starIconResult="starIcon * (film.vote_average / 2)"
     />
   </div>
   <div>
