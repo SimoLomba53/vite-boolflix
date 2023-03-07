@@ -9,6 +9,8 @@ export default {
     originalnameseries: String,
     originallanguageseries: String,
     voteseries: String,
+    imagefilm: Image,
+    imageseries: Image,
   },
 
   methods: {
@@ -51,6 +53,7 @@ export default {
 
 <template>
   <div class="text-center text-light">
+    <img :src="imagefilm" alt="" />
     <h1>{{ title }}</h1>
     <p>{{ originalname }}</p>
     <img id="flag" :src="getFlag(language)" alt="" />
