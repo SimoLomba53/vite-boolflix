@@ -20,7 +20,7 @@ export default {
       class="d-flex flex-row align-items-center justify-content-between p-2 bg-light"
     >
       <div>
-        <h1 class="text-danger">BOOLFIX</h1>
+        <h1 class="text-danger boolfixtitle">BOOLFIX</h1>
       </div>
 
       <div>
@@ -38,7 +38,7 @@ export default {
             <button
               type="button"
               @click="search"
-              class="input-group-text text-white bg-dark"
+              class="input-group-text text-white  principalbutton"
               id="basic-addon2"
             >
               SEARCH
@@ -50,4 +50,12 @@ export default {
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.principalbutton{
+  background-color:black;
+  transition: 0.8s;
+}
+.principalbutton:hover{
+   background-color: green;
+}
+</style>

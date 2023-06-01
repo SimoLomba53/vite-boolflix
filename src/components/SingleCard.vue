@@ -59,6 +59,7 @@ export default {
 </script>
 
 <template>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <div class="flip-card text-center text-light">
     <div class="flip-card-inner d-flex">
       <div
@@ -70,12 +71,12 @@ export default {
       <div
         class="flip-card-back d-flex flex-column align-items-center justify-content-center"
       >
-        <h1>{{ title }}{{ titleseries }}</h1>
-        <p>{{ originalname }}{{ originalnameseries }}</p>
+        <h1 class="text-danger">{{ title }}{{ titleseries }}</h1>
+        <p class="text-dark">{{ originalname }}{{ originalnameseries }}</p>
         <img id="flag" :src="getFlag(language)" alt="" />
         <img id="flag" :src="getFlag(originallanguageseries)" alt="" />
-        <p>{{ vote }}{{ voteseries }}</p>
-        <p>{{ starIconResult }}</p>
+        <p>{{ vote }}{{ voteseries }}<i class="fa-solid fa-star" style="color: #ffea00;"></i></p>
+        <p></p>
       </div>
     </div>
   </div>
@@ -103,6 +104,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 .flip-card {
@@ -135,7 +137,8 @@ export default {
 }
 
 .flip-card-back {
-  background-color: rgb(207, 207, 207);
+  background-image: url(https://images.unsplash.com/photo-1530176928500-2372a88e00b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80);
+  background-size: cover;
   color: white;
   transform: rotateY(180deg);
 }
